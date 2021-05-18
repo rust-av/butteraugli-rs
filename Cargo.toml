@@ -1,0 +1,15 @@
+[package]
+name = "butteraugli"
+version = "0.1.0"
+authors = ["Luca Barbato <lu_zero@gentoo.org>"]
+edition = "2018"
+license = "Apache-2.0"
+description = "Rust port of the Google butteraugli metric"
+homepage = "https://github.com/rust-av/butteraugli-rs"
+readme = "README.md"
+repository = "https://github.com/rust-av/butteraugli-rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
