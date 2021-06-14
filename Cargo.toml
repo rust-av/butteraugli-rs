@@ -1,7 +1,10 @@
 [package]
 name = "butteraugli-rs"
 version = "0.1.0"
-authors = ["Luca Barbato <lu_zero@gentoo.org>"]
+authors = [
+    "Luca Barbato <lu_zero@gentoo.org>",
+    "sn99 <siddharthn.099@gmail.com>"
+]
 edition = "2018"
 license = "Apache-2.0"
 description = "Rust port of the Google butteraugli metric"
@@ -12,12 +15,9 @@ repository = "https://github.com/rust-av/butteraugli-rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-cxx = "1.0"
 libc = "0.2"
 structopt = "0.3"
-
-[build-dependencies]
-cxx-build = "1.0"
+image = "0.23.14"
 
 [dev-dependencies]
 assert_cmd = "1.0.5"

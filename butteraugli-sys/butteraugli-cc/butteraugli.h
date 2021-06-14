@@ -625,8 +625,8 @@ static inline double GammaPolynomial(double value) {
 	return r(value);
 }
 
-// namespace butteraugli
-
 #endif  // BUTTERAUGLI_BUTTERAUGLI_H_
 
 int Run(int argc, char *argv[]);
+
+double diff_value(char *filename1, char *filename2);
