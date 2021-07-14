@@ -1998,7 +1998,6 @@ double ButteraugliFuzzyInverse(double seek) {
 	return pos;
 }
 
-
 void ScoreToRgb(double score, double good_threshold,
                 double bad_threshold, uint8_t rgb[3]) {
 	double heatmap[12][3] = {
@@ -2055,7 +2054,6 @@ void CreateHeatMapImage(const std::vector<float> &distmap,
 	}
 }
 
-// namespace butteraugli
 // "rgb": cleared and filled with same-sized image planes (one per channel);
 // either RGB, or RGBA if the PNG contains an alpha channel.
 bool ReadPNG(FILE *f, std::vector <Image8> *rgb) {

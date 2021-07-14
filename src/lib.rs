@@ -3,6 +3,7 @@ mod butteraugli;
 use crate::butteraugli::open_image;
 use std::path::PathBuf;
 use structopt::StructOpt;
+use v_frame::plane;
 
 #[derive(Debug, StructOpt)]
 #[structopt(
