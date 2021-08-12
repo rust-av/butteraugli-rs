@@ -35,8 +35,6 @@
 // This is the main interface to butteraugli image similarity
 // analysis function.
 
-
-
 template<typename T>
 class Image;
 
