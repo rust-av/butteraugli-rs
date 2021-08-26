@@ -1,4 +1,5 @@
 mod butteraugli;
+mod image;
 
 use crate::butteraugli::open_image;
 use std::path::PathBuf;

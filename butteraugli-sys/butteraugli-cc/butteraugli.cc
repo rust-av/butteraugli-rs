@@ -172,6 +172,7 @@ void ConvolveBorderColumn(
 	const float border_ratio,
 	const size_t x,
 	float *const BUTTERAUGLI_RESTRICT row_out) {
+
 	const int offset = kernel.size() / 2;
 	int minx = x < offset ? 0 : x - offset;
 	int maxx = std::min<int>(in.xsize() - 1, x + offset);

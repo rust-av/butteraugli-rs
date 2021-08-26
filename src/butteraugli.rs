@@ -977,3 +977,45 @@ pub fn new_srgb_to_linear_table() -> [f64; 256] {
 
     table
 }
+
+/////////////////////////////// move to image.rs
+
+use crate::image::ImageF;
+use std::cmp::min;
+
+pub fn convolve_border_column(
+    in_: &ImageF,
+    kernel: Vec<f64>,
+    weight_no_border: f64,
+    border_ratio: f64,
+    x: isize,
+    row_out: f64,
+) {
+    let offset = kernel.len() / 2;
+
+    let mut minx = x - offset;
+
+    if x < offset as isize {
+        minx = 0;
+    }
+
+    let maxx = (in_.xsize() - 1).min(x + offset);
+
+    let mut weight = 0.0;
+
+    for j in minx..=maxx {
+        weight += kernel[(j - x + offset) as usize];
+    }
+
+    // Interpolate linearly between the no-border scaling and border scaling.
+    weight = (1.0 - border_ratio) * weight + border_ratio * weight_no_border;
+    let scale = 1.0 / weight;
+    for y in 0..in_.ysize() {
+        let row_in = in_.Row(y);
+        let mut sum = 0.0;
+        for j in minx..=maxx {
+            sum += row_in[j] * kernel[j - x + offset];
+        }
+        row_out[y] = sum * scale;
+    }
+}
