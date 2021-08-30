@@ -1,4 +1,4 @@
-use butteraugli_rs::run;
+use butteraugli::run;
 
 fn main() {
     run();
