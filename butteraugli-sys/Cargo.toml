@@ -20,6 +20,11 @@ libc = "0.2"
 
 [build-dependencies]
 cxx-build = "1.0"
+system-deps = "3.2.0"
+
+[package.metadata.system-deps]
+libpng = "1.0"
+libjpeg = "1.0"
 
 [dev-dependencies]
 assert_cmd = "1.0.5"
