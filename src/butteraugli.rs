@@ -983,6 +983,7 @@ pub fn new_srgb_to_linear_table() -> [f64; 256] {
 use crate::image::ImageF;
 use std::cmp::min;
 
+/*
 pub fn convolve_border_column(
     in_: &ImageF,
     kernel: Vec<f64>,
@@ -1019,3 +1020,4 @@ pub fn convolve_border_column(
         row_out[y] = sum * scale;
     }
 }
+*/

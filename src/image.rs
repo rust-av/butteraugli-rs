@@ -1,8 +1,8 @@
 use std::mem;
 
 pub struct ImageF {
-    pub xsize_: usize,
-    pub ysize_: usize,
+    pub xsize: usize,
+    pub ysize: usize,
     pub bytes_per_row: usize,
 }
 
